@@ -11,7 +11,9 @@ const CounterInput = () => {
     return (
         <div>
            <button onClick ={()=>dispatch({type:"INCREMENT"})}>+</button> 
-           <button onClick ={()=>dispatch({type:"DECREMENT"})}>-</button> 
+           <button onClick ={()=>dispatch({type:"DECREMENT"})}>-</button>
+           <br/>
+           <button onClick ={()=>dispatch({type:"changeString"})}>Click to change your string</button> 
         </div>
     )
 }

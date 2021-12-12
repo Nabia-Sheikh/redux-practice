@@ -21,6 +21,16 @@ const myReducer = (state = initialState, action) => {
                 ...state,
                 counter: state.counter - 1,
             }
+        case 'changeString':
+            return {
+                ...state,
+                str: "It has been changed"
+            }
+        case 'addItem':
+            return{
+                ...state,
+                data: ['Nabia ','24 Years old']
+            }
         default:
             return state;
     }
