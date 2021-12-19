@@ -1,14 +1,17 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux';
 
 const AddItem = () => {
     const [title , setTitle] = useState();
     const [prize , setPrize] = useState();
-
+    const dispatch = useDispatch();
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log(title);
+        const result = {title , prize}
+        dispatch(addBook(result))
     }
     return (
         <Form onSubmit={handleSubmit}>

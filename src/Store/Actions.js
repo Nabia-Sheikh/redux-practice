@@ -1,11 +1,7 @@
-import React from 'react'
-
-const Actions = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export const addBook = (payload) => {
+    return {type:'ADDBOOK',payload}
 }
 
-export default Actions
+export const showBooks = () => {
+    return {type:'LIST'}
+}

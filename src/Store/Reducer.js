@@ -18,28 +18,19 @@ const initialState = {
 const myReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case 'INCREMENT':
-            return {
-                ...state,
-                counter: state.counter + 1,
-            }
-        case 'DECREMENT':
-            return {
-                ...state,
-                counter: state.counter - 1,
-            }
-        case 'changeString':
-            return {
-                ...state,
-                str: "It has been changed"
-            }
-        case 'addItem':
-            return {
-                ...state,
-                data: [...'Nabia ', '24 Years old']
-            }
+        case 'LIST':
+            return state.books;
+            
+        case 'ADDBOOK':
+            
+                const newbook = []
+                newbook.push(action.payload)
+               
         default:
-            return state;
+            return{
+                ...state,
+                books: [...state.books, ...newbook]
+            } 
     }
 
 
