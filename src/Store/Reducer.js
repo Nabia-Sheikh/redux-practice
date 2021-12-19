@@ -3,9 +3,16 @@ import React from 'react'
 
 
 const initialState = {
-    counter: 0,
-    data: [],
-    str: "redux class"
+    books: [
+        {
+            title: "harray potter",
+            prize: 500
+        },
+        {
+            title: "harray potter 2",
+            prize: 600
+        }
+    ]
 };
 
 const myReducer = (state = initialState, action) => {
@@ -27,9 +34,9 @@ const myReducer = (state = initialState, action) => {
                 str: "It has been changed"
             }
         case 'addItem':
-            return{
+            return {
                 ...state,
-                data: ['Nabia ','24 Years old']
+                data: [...'Nabia ', '24 Years old']
             }
         default:
             return state;
