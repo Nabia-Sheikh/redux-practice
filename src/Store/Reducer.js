@@ -22,15 +22,16 @@ const myReducer = (state = initialState, action) => {
             return state.books;
             
         case 'ADDBOOK':
-            
+                console.log(action.payload);
                 const newbook = []
                 newbook.push(action.payload)
+                return{
+                    ...state,
+                    books: [...state.books, ...newbook]
+                }
                
         default:
-            return{
-                ...state,
-                books: [...state.books, ...newbook]
-            } 
+            return state
     }
 
 
